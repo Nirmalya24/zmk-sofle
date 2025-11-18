@@ -47,6 +47,21 @@
             bindings = <&soft_off>;
             key-positions = <14 28 40>;
         };
+
+        layer2 {
+            bindings = <&tog 2>;
+            key-positions = <56 2>;
+        };
+
+        layer1 {
+            bindings = <&tog 1>;
+            key-positions = <56 1>;
+        };
+
+        layer3gaming {
+            bindings = <&to 3>;
+            key-positions = <56 31>;
+        };
     };
 
     keymap {
@@ -93,15 +108,15 @@
 
         layer_3 {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&kp ESC     &kp N1     &kp N2    &kp N3    &kp N4     &kp N5     &kp UP     &kp N6     &kp N7   &kp N8     &kp N9   &kp N0    &kp BSPC
+&kp TAB     &kp Q      &kp W     &kp E     &kp R      &kp T      &kp DOWN   &kp Y      &kp U    &kp I      &kp O    &kp P     &kp BSLH
+&kp LGUI    &kp A      &kp S     &kp D     &kp F      &kp G      &kp LEFT   &kp H      &kp J    &kp K      &kp L    &kp SEMI  &kp SQT
+&kp LSHFT   &kp Z      &kp X     &kp C     &kp V      &kp B      &kp RIGHT  &kp N      &kp M    &kp COMMA  &kp DOT  &kp FSLH  &kp RET
+&kp C_MUTE  &kp LCTRL  &kp LGUI  &kp LALT  &kp SPACE  &kp RET    &kp RET    &kp SPACE  &kp RET  &kp SPACE  &kp DEL  &kp DEL
             >;
 
             display-name = "layer3";
-            sensor-bindings = <&scroll_encoder>;
+            sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
         };
 
         layer_4 {
@@ -112,7 +127,8 @@
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
             >;
-         display-name = "layer4";
+
+            display-name = "layer4";
             sensor-bindings = <&scroll_encoder>;
         };
     };
